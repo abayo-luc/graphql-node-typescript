@@ -1,4 +1,4 @@
-import * as user from './user';
+import * as user from '../user';
 
 // the resolver should expose Query and Mutation
 export default {

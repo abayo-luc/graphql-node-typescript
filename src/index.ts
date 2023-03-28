@@ -1,9 +1,9 @@
 import express from 'express';
 import { ApolloServer, gql } from 'apollo-server-express';
 import { readFileSync } from 'fs';
-import resolvers from './src/resolvers';
+import resolvers from './graphql/resolvers';
 
-const typeDefs = readFileSync('./src/schema.gql', {
+const typeDefs = readFileSync('./src/graphql/schema.gql', {
   encoding: 'utf-8',
 });
 

@@ -19,3 +19,6 @@
 ## Get Started
 
 To start the containers, you can run docker-compose up in the directory containing the `docker-compose.yml` file. This will start the containers in the foreground, and you can see the output from the containers in the terminal. To start the containers in the background, you can use `docker-compose up -d`.
+
+## NOTE
+To build the sample Graphql end point, please check `INSTRUCTIONS.md`

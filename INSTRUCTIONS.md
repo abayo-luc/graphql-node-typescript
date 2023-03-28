@@ -62,11 +62,10 @@ node index.js
 ## The Query
 ```json
 query {
-  user {
-    email
-    firstName
-    lastName
-    role
-  }
+	user {
+		email
+		name
+		role
+	}
 }
 ```

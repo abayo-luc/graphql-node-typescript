@@ -7,13 +7,21 @@ import { ApolloServer, gql } from 'apollo-server-express';
 
 const typeDefs = gql`
   type Query {
-    hello: String
+    user:{
+      name: String!
+      email: String!
+      role: String
+    }
   }
 `;
 
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
+    user: () => ({
+      name: "John Doe",
+      email:"john@example.com",
+      role:"admin"
+    }),
   },
 };
 
@@ -49,4 +57,16 @@ To run this app, you can use the TypeScript compiler to compile the index.ts fil
 ```bash
 npx tsc index.ts
 node index.js 
+```
+
+## The Query
+```json
+query {
+  user {
+    email
+    firstName
+    lastName
+    role
+  }
+}
 ```

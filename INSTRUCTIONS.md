@@ -1,7 +1,7 @@
-## Configure your index.ts
+### GETTING STARTED & SETUP
 Create `index.ts` file for a Node.js app that uses `TypeScript` and `apollo-server-express` to implement a `GraphQL API`
 
-```
+```ts
 import express from 'express';
 import { ApolloServer, gql } from 'apollo-server-express';
 
@@ -43,9 +43,10 @@ The `server.applyMiddleware({ app })` line adds the ApolloServer middleware to t
 
 Finally, the app.listen line starts the express server and listens on port 3000. The console.log line prints a message to the console indicating that the server is running and what the GraphQL API endpoint is.
 
-To run this app, you can use the TypeScript compiler to compile the index.ts file into JavaScript, and then run the resulting JavaScript file using Node.js:
 
-```
+### RUNNING THE APP
+To run this app, you can use the TypeScript compiler to compile the index.ts file into JavaScript, and then run the resulting JavaScript file using Node.js:
+```bash
 npx tsc index.ts
-node index.js
+node index.js 
 ```

@@ -4,9 +4,9 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: test
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
@@ -16,11 +16,11 @@ services:
     restart: always
     environment:
       NODE_ENV: production
-      DATABASE_URL: postgres://myuser:mypassword@db:5432/mydatabase
+      DATABASE_URL: postgres://postgres:password@db:5432/test
     volumes:
       - .:/app
     ports:
-      - '3000:3000'
+      - '8181:8181'
     depends_on:
       - db
 volumes:
